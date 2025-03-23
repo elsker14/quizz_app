@@ -1,0 +1,46 @@
+import 'package:flutter/material.dart';
+
+void main() {
+    runApp(
+        MaterialApp(
+            home: Scaffold(
+                body: Container(
+                    decoration: BoxDecoration(
+                        color: Colors.deepPurple
+                    ),
+                    child: Center(
+                        child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                                Image.asset(
+                                    'assets/images/quiz-logo.png',
+                                    width: 200
+                                ),
+                                SizedBox(
+                                    height: 60
+                                ),
+                                Text(
+                                    'Learn Flutter the fun way!',
+                                    style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20
+                                    )
+                                ),
+                                OutlinedButton(
+                                    onPressed: () {
+                                    },
+                                    child: const Text(
+                                        "Start Quiz",
+                                        style: TextStyle(
+                                            color: Colors.white
+                                        )
+                                    )
+                                )
+                            ]
+                        )
+                    )
+                )
+            )
+        )
+    );
+}
