@@ -3,6 +3,6 @@ import 'package:quizz_app/quiz.dart';
 
 void main() {
     runApp(
-        Quiz()
+        const Quiz()
     );
 }
