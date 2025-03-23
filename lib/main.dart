@@ -1,44 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:quizz_app/start_screen.dart';
 
 void main() {
     runApp(
         MaterialApp(
             home: Scaffold(
                 body: Container(
-                    decoration: BoxDecoration(
-                        color: Colors.deepPurple
-                    ),
-                    child: Center(
-                        child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                                Image.asset(
-                                    'assets/images/quiz-logo.png',
-                                    width: 200
-                                ),
-                                SizedBox(
-                                    height: 60
-                                ),
-                                Text(
-                                    'Learn Flutter the fun way!',
-                                    style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20
-                                    )
-                                ),
-                                OutlinedButton(
-                                    onPressed: () {
-                                    },
-                                    child: const Text(
-                                        "Start Quiz",
-                                        style: TextStyle(
-                                            color: Colors.white
-                                        )
-                                    )
-                                )
-                            ]
+                    decoration: const BoxDecoration(
+                        gradient: LinearGradient(
+                            colors: [
+                                Colors.deepOrange,
+                                Colors.greenAccent
+                            ],
+                            begin: Alignment.topLeft,
+                            end: Alignment.bottomRight
                         )
-                    )
+                    ),
+                    child: const StartScreen()
                 )
             )
         )
