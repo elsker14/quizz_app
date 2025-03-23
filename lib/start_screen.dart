@@ -12,9 +12,20 @@ class StartScreen extends StatelessWidget{
                 children: [
                     Image.asset(
                         'assets/images/quiz-logo.png',
-                        width: 300
+                        width: 300,
+                        color: Color.fromARGB(150, 255, 255, 255) // easier on performance
                     ),
-                    SizedBox(
+                    /*
+                    - on bigger apps tends to be to intensive in performance
+                    Opacity(
+                        opacity: 0.5,
+                        child: Image.asset(
+                            'assets/images/quiz-logo.png',
+                            width: 300
+                        )
+                    ),
+                    */
+                    const SizedBox(
                         height: 80
                     ),
                     const Text(
@@ -24,11 +35,12 @@ class StartScreen extends StatelessWidget{
                             fontSize: 24
                         )
                     ),
-                    SizedBox(
+                    const SizedBox(
                         height: 30
                     ),
                     OutlinedButton.icon(
                         onPressed: () {
+
                         },
                         style: OutlinedButton.styleFrom(
                             foregroundColor: Colors.white
